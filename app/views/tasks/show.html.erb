@@ -1,0 +1,14 @@
+<div class="d-flex">
+  <h1><%= @task.title %></h1>
+  <%= link_to 'Edit this task', edit_task_path %>
+</div>
+<p><%= @task.details %></p>
+<% if @task.completed %>
+  <input type="checkbox" name="<%= @task.title %>" checked>
+<% else %>
+  <input type="checkbox" name="<%= @task.title %>">
+<% end %>
+<label for="<%= @task.title %>">This task is completed</label>
+</div>
+
+<%= link_to 'Back to list', tasks_path %>
